@@ -1,0 +1,45 @@
+.footer{
+    background-color: rgba(0, 99, 255, 1);
+    margin-top: -1px; /* un espace de merde sinon  */
+    display: inline-block; 
+    width: 100%;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.separation{
+    height: 5px;
+    width: 130px;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: rgb(255, 255, 255);
+    border: 0px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    opacity: 1;
+    
+}
+.Websites{
+    padding:30px;
+
+}
+.Websites > a{
+    padding:2%;
+}
+.Contact{
+    padding:30px;
+
+}
+.info{
+    padding:30px;
+}
+

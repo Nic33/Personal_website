@@ -1,3 +1,173 @@
+.panel_1{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items: center;
+
+    margin-left:auto;
+    margin-right: auto;
+
+    position:relative;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+h1{
+
+    margin-left:  2%;
+    margin-right:  2%;
+
+}
+
+.carousel {
+    min-width: 400px; 
+    max-width: 900px;
+    height: auto;
+
+    margin-left:  2%;
+    margin-right:  2%;
+
+    
+}
+
+.carousel_img{
+    width: 100%;
+    height: auto;
+    padding:80px;
+}
+
+/* ----------------------------------------------------- */
+ 
+.panel_2{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.a-propos{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items: center;
+
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.presentation{
+
+    font-family: 'Roboto', sans-serif;
+
+    max-width: 500px;
+    height: auto;
+    background-color: rgba(0, 99, 255, 1);
+    border-radius: 20px;
+
+    padding:20px;
+    margin:8%;
+    margin:8%;
 
 
+}
 
+.flip-card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 1em;
+  }
+  
+  .progress-bar {
+    background-color: rgb(255, 177, 81);
+    height: 100%;
+    border-radius: 10px;
+
+  }
+  
+
+/* ----------------------------------------------------- */
+
+.panel_3{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    
+    margin-top: 6%;
+    margin-bottom: 6%;
+
+}
+
+.projet{
+
+    padding-top: 40px;
+
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items: center;
+
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.proj{
+
+    font-family: 'Roboto', sans-serif;
+
+    width: 400px;
+    height: auto;
+    background-color: rgba(0, 99, 255, 1);
+    border-radius: 20px;
+
+    padding:20px;
+    margin: 20px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .carousel {
+        margin: 0;
+        
+    }
+}

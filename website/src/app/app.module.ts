@@ -6,23 +6,32 @@ import { AppComponent } from './app/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Modules Angular Material
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
+//import { MatButtonModule } from '@angular/material/button';
 
 // Votre composant Navbar
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+//import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent // Ajoutez votre composant Navbar ici
+    NavbarComponent, 
+    HomeComponent, 
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule, // Ajoutez le module MatToolbarModule ici
-    MatButtonModule // Ajoutez le module MatButtonModule ici
+
+    FormsModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
