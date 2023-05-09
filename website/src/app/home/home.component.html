@@ -39,6 +39,8 @@
    <div class = "a-propos">
 
          <div class ="presentation">
+            <h4>P'tite présentation</h4>
+
             Coucou 👋, je suis Nicolas Dubuisson, j'ai 21 ans et je suis passioné par l'informatique.
             J'adore programmer des projets très différents et apprendre de nouvelles choses.
             <br>
@@ -56,22 +58,24 @@
                </div>
          </div>
 
-         <div class ="presentation">
+         <div class="presentation_2">
             <h4>Mes langages étudiés</h4>
-            
-            <div *ngFor="let progressBar of progressBars">
-               <label>{{ progressBar.label }}</label>
-               <div id="progress-bar-container" class="progress-bar-container">
-                 <div
-                   class="progress-bar"
-                   [@animateProgressBar]="{ value: progressBar.animationState || 'start', params: { startWidth: 0, endWidth: progressBar.value, duration: '2s' } }"
-                   (@animateProgressBar.done)="onAnimationEvent($event, progressBar)"
-                 ></div>
-               </div>
-             </div>
-             
-             
-         </div>
+          
+            <div *ngFor="let progressBar of progressBars" class="progress-bar-wrap">
+              <label>{{ progressBar.label }}</label>
+              <div id="progress-bar-container" class="progress-bar-container">
+                <div
+                  [attr.id]="progressBar.label"
+                  class="progress-bar"
+                  [@animateProgressBar]="{
+                    value: progressBar.animationState,
+                    params: { startWidth: 0, endWidth: progressBar.value * 10, duration: '2s' }
+                  }"
+                ></div>
+              </div>
+            </div>
+          </div>
+          
       
    </div>
 </div>
@@ -83,7 +87,21 @@
    <div class = "projet">
 
          <div class ="proj">
-            Github
+            <h4>
+               Github
+            </h4>
+
+            <u>Description :</u>
+            <br>
+            <p>
+               vezfblvijhvuivhzliuvzivjl
+            </p>
+
+            <u>Lien :</u>
+            <br>
+            <a href="https://github.com/Nic33" target="_blank">
+               <img src = "../../assets/img/github-mark.png">
+            </a>
          </div>
 
          <div class ="proj">
