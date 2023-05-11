@@ -194,6 +194,41 @@ h1{
     width:80px;
 }
 
+/* ----------------------------------------------------- */
+
+.Proj_Button{
+      
+    text-decoration: none;
+  
+    height: 40px;
+    width: 120px;
+  
+    border: 0px solid rgb(255, 255, 255);
+    border-radius:5px;
+
+    background : white;
+    color: rgb(0, 0, 0);
+
+    margin-bottom:20px;
+    padding:10px;
+
+    transition : 0.3s;
+}
+  
+.Proj_Button:hover{
+  
+    border-radius:15px;
+    
+}
+
+summary{
+    font-size:x-large;
+}
+
+/* ----------------------------------------------------- */
+
+
+
 @media screen and (max-width: 768px) {
 
 
