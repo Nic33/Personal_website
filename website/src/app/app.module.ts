@@ -11,25 +11,31 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Votre composant Navbar
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { AccountComponent } from './account/account.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule } from '@angular/forms';
-import { FooterComponent } from './footer/footer.component';
 //import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
+import { TimelineModule } from 'primeng/timeline';
+import { ToastModule } from 'primeng/toast';
+import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent, 
     HomeComponent, 
-    FooterComponent,
+    FooterComponent, AccountComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    TimelineModule,
+    ToastModule,
+    MenubarModule,
     FormsModule,
     CarouselModule.forRoot()
   ],

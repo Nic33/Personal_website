@@ -2,6 +2,7 @@ import { Component, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 import { AnimationBuilder, trigger, state, style, animate, transition } from '@angular/animations';
 import { AnimationEvent } from '@angular/animations';
+import { MessageService } from 'primeng/api';
 
 // Ajoutez l'interface ici
 interface ProgressBar {
@@ -19,7 +20,8 @@ interface ProgressBar {
       interval: 3000, 
       noPause: false, 
       showIndicators: true,
-      startFromIndex : 0 } }
+      startFromIndex : 0 } },
+      MessageService
  ],
 
   styleUrls: ['./home.component.css'],
@@ -39,14 +41,22 @@ export class HomeComponent implements AfterViewInit {
 
   private observer!: IntersectionObserver;
 
-  constructor(
-    private renderer: Renderer2,
-    private el: ElementRef,
-    private animationBuilder: AnimationBuilder
-  ) {
+  events: any[];
+
+  constructor(private el: ElementRef, private messageService: MessageService) {
     for (let i = 0; i < this.img_names.length; i++) {
       this.addSlide(i);
     }
+    this.events = [
+      { status: 'Bac S SI à Talence', date: '2017-2020 ' },
+      { status: 'Licence Informatique à Talence', date: '2020-2023 ' },
+      { status: "1A R&I à l'Enseirb Matmeca de Talence", date: '2023-2024 ' }
+
+    ];
+  }
+
+  show() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
   }
 
   // Mettre à jour la propriété progressBars avec le type ProgressBar[]

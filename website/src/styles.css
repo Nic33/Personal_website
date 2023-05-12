@@ -1,6 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "primeng/resources/themes/lara-light-teal/theme.css";
+@import "primeng/resources/primeng.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.p-timeline-event {
+  height: 120px; /* Changez cette valeur selon vos préférences */
+}
+
 
 body {
     background-color: black;

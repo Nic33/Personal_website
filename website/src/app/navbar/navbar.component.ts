@@ -17,4 +17,12 @@ export class NavbarComponent implements OnInit {
     this.menuActive = !this.menuActive;
     this.menuIcon = this.menuActive ? 'close' : 'menu';
   }
+
+  scrollToElement(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
 }

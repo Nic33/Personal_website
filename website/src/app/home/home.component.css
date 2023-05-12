@@ -9,7 +9,7 @@
 
     position:relative;
 
-    margin-top: 40px;
+    margin-top: 100px;
     margin-bottom: 40px;
 
 }
@@ -47,6 +47,28 @@ h1{
     margin-bottom: 6%;
 }
 
+/* ----------------------------------------------------- */
+
+.titre_flex{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items: center;
+
+}
+
+.titre_flex > img{
+
+
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+}
+
+/* ----------------------------------------------------- */
+
 .a-propos{
 
     display:flex;
@@ -57,71 +79,47 @@ h1{
     margin-left:auto;
     margin-right: auto;
 
+    margin-top: 80px;
+    margin-bottom: 80px;
+
 }
+
+/* ----------------------------------------------------- */
 
 .presentation{
 
     font-family: 'Roboto', sans-serif;
 
-    max-width: 500px;
+    width: 400px;
     height: auto;
-    background-color: rgba(0, 99, 255, 1);
-    border-radius: 20px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 5px;
 
     padding:20px;
-    margin:8%;
-    margin:8%;
 
-
-}
-
-.flip-card {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
-
-.flip-card:hover {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
+    margin-left:4%;
+    margin-right:4%;
 
 }
 
-.flip-card-front img,
-.flip-card-back img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-
-
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-}
+/* ----------------------------------------------------- */
 
 .presentation_2{
 
     font-family: 'Roboto', sans-serif;
 
-    max-width: 700px;
+    width: 400px;
     height: auto;
-    background-color: rgba(0, 99, 255, 1);
-    border-radius: 20px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 5px;
 
     padding:20px;
-    margin:8%;
-    margin:8%;
+
+    margin-left:4%;
+    margin-right:4%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
 }
 
 .progress-bar-wrap{
@@ -134,14 +132,14 @@ h1{
     border-radius: 10px;
 
     height: 20px;
-    width: 100px;
+    width: 200px;
 
     margin: 5px;
 
   }
 
   .progress-bar {
-    background-color: #000000;
+    background-color: #00bdb7;
     border-radius: 10px;
     
     height: 100%;
@@ -149,6 +147,24 @@ h1{
 
   }
   
+
+/* ----------------------------------------------------- */
+
+.presentation_3{
+
+    font-family: 'Roboto', sans-serif;
+
+    width: 400px;
+    height: auto;
+    background-color: rgb(80, 80, 80);
+    border-radius: 5px;
+
+    padding:20px;
+
+    margin-left:4%;
+    margin-right:4%;
+}
+
 
 /* ----------------------------------------------------- */
 
@@ -182,8 +198,8 @@ h1{
 
     width: 400px;
     height: auto;
-    background-color: rgba(0, 99, 255, 1);
-    border-radius: 20px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 5px;
 
     padding:20px;
     margin: 20px;
@@ -217,7 +233,7 @@ h1{
   
 .Proj_Button:hover{
   
-    border-radius:15px;
+    border-radius:20px;
     
 }
 
