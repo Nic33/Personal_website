@@ -55,6 +55,7 @@ Le DOM est une interface de programmation qui permet aux programmes d'interagir 
 Pour ce projet, j'ai utilisé deux API :
 
 https://primeng.org/
+
 https://valor-software.com/ngx-bootstrap/#/components/carousel?tab=overview
 
 ## Data
