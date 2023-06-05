@@ -22,9 +22,6 @@ export class AccountComponent implements OnInit {
       { label: 'Contact', icon: 'pi pi-envelope', routerLink: '/contact' },
       // Ajoutez ici d'autres éléments de menu si nécessaire
     ];
-
-    
-    
   }
 
 }
@@ -32,12 +29,12 @@ export class AccountComponent implements OnInit {
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBZ50bpfFiA6SeMWqRyzWEKnnbF67zysYw",
-    authDomain: "website-7dbd4.firebaseapp.com",
-    projectId: "website-7dbd4",
-    storageBucket: "website-7dbd4.appspot.com",
-    messagingSenderId: "307468397114",
-    appId: "1:307468397114:web:30bd6d3587fb6097fb6303",
-    measurementId: "G-3WVFLMNR0Y"
+    apiKey: "x",
+    authDomain: "x",
+    projectId: "x",
+    storageBucket: "x",
+    messagingSenderId: "x",
+    appId: "x",
+    measurementId: "x"
   }
 };

@@ -21,25 +21,16 @@ import { FormsModule } from '@angular/forms';
 import { TimelineModule } from 'primeng/timeline';
 import { ToastModule } from 'primeng/toast';
 import { MenubarModule } from 'primeng/menubar';
-
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from '../app/account/account.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { LestonComponent } from './leston/leston.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent, 
     HomeComponent, 
-    FooterComponent, AccountComponent, DashboardComponent, SignInComponent, SignUpComponent, ForgotPasswordComponent, VerifyEmailComponent,
+    FooterComponent, 
+    AccountComponent, 
+    LestonComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,11 +42,6 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     FormsModule,
     CarouselModule.forRoot(),
 
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

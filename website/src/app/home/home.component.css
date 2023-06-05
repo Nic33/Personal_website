@@ -1,3 +1,12 @@
+.home {
+    background-color: black;
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    height: 100%;
+}
+
 .panel_1{
     display:flex;
     justify-content:center;
@@ -9,11 +18,9 @@
 
     position:relative;
 
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin-top: 60px;
 
 }
-
 h1{
 
     margin-left:  2%;
@@ -173,7 +180,7 @@ h1{
     width: 100%;
     
     margin-top: 6%;
-    margin-bottom: 6%;
+    padding-bottom: 6%;
 
 }
 
