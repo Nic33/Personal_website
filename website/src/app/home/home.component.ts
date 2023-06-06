@@ -3,6 +3,7 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
 import { AnimationBuilder, trigger, state, style, animate, transition } from '@angular/animations';
 import { AnimationEvent } from '@angular/animations';
 import { MessageService } from 'primeng/api';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 // Ajoutez l'interface ici
 interface ProgressBar {
@@ -32,6 +33,12 @@ interface ProgressBar {
       state('end', style({ width: '{{endWidth}}%' }), { params: { endWidth: 10 } }),
       transition('start => end', animate('{{duration}}')),
     ]),
+    trigger('pageTransition', [
+      state('fade-out', style({ opacity: 0 })),
+      state('fade-in', style({ opacity: 1 })),
+      transition('fade-out => fade-in', animate('300ms ease-in')),
+      transition('fade-in => fade-out', animate('300ms ease-out')),
+    ]),
   ],
   
 
@@ -41,12 +48,27 @@ export class HomeComponent implements AfterViewInit {
 
   private observer!: IntersectionObserver;
 
+  private transitionState: string = 'fade-in';
+
+  getPageTransitionState(): string {
+    return this.transitionState;
+  }
+
   events: any[];
 
-  constructor(private el: ElementRef, private messageService: MessageService) {
+  constructor(private el: ElementRef, private messageService: MessageService, private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.transitionState = 'fade-out';
+      } else if (event instanceof NavigationEnd) {
+        this.transitionState = 'fade-in';
+      }
+    });
+
     for (let i = 0; i < this.img_names.length; i++) {
       this.addSlide(i);
     }
+
     this.events = [
       { status: 'Bac S SI à Talence', date: '2017-2020 ' },
       { status: 'Licence Informatique à Talence', date: '2020-2023 ' },
@@ -138,4 +160,5 @@ export class HomeComponent implements AfterViewInit {
     this.slides.splice(toRemove, 1);
   } 
   */
+
 }
