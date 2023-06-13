@@ -18,13 +18,13 @@
 
     position:relative;
 
-    margin-top: 60px;
+    padding-top:100px;
 
 }
-h1{
+.titre_style{
 
-    margin-left:  2%;
-    margin-right:  2%;
+    margin-left:4%;
+    margin-right:4%;
 
 }
 
@@ -42,7 +42,12 @@ h1{
 .carousel_img{
     width: 100%;
     height: auto;
-    padding:80px;
+
+    padding-left:80px;
+    padding-right:80px;
+    padding-bottom:80px;
+    padding-top:20px;
+
 }
 
 /* ----------------------------------------------------- */
@@ -246,22 +251,6 @@ h1{
 
 summary{
     font-size:x-large;
-}
-
-/* ----------------------------------------------------- */
-
-.page-container {
-    /* Styles de base de la page */
-}
-
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
-    transition: opacity 0.3s ease-in;
 }
   
 /* ----------------------------------------------------- */

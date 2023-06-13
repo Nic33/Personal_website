@@ -56,4 +56,108 @@ a{
     transition : 0.3s;
 }
 
+/*--------------------------------------*/
+
+.panel_2{
+
+    /* centrer horizontalement */
+    display: flex; 
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items: center;
+
+    margin-top: 100px;
+
+    margin-left : auto;
+    margin-right : auto;
+
+}
+
+.panel_2_1{
+
+    /* centrer verticalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 440px;
+    height:auto;
+    /* background-color:grey;  */
+
+    margin-left: 50px;
+    margin-right: 10px;
+
+    margin-top: 60px;
+
+}
+
+.panel_2_2{
+
+    display: flex; 
+    flex-direction: column;
+    text-align: left;
+
+    width: 300px;
+    height:auto;
+    /* background-color:grey;  */
+
+    margin-top: 60px;
+
+}
+
+.new {
+	border-radius: 3px;
+
+	margin-top: 200px;
+	margin-bottom: 200px;
+
+	margin-left: 35%;
+	margin-right: 35%;
+    
+	border: 3px solid #000000;
+}
+
+.panel_3{
+
+    /* centrer horizontalement */
+    display: flex; 
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items: center;
+
+    margin-top: 100px;
+
+    margin-left : auto;
+    margin-right : auto;
+
+}
+
+.panel_3 > img{
+
+    width : 300px;
+    height: auto;
+    object-fit:contain;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    transition: 1s;
+
+}
+
+.panel_3 > img:hover{
+
+    transition: 1s;
+    width : 700px;
+    height: auto;
+    object-fit:contain;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+  
 
