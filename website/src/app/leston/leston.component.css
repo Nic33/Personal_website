@@ -117,6 +117,8 @@ a{
 	border: 3px solid #000000;
 }
 
+/*--------------------------------------*/
+
 .panel_3 {
     /* centrer horizontalement */
     display: flex;
@@ -183,7 +185,61 @@ a{
 .overlay-text {
     font-size: 20px;
 }  
-  
+
+/*--------------------------------------*/
+
+.panel_4{
+
+    margin-top: 100px;
+
+}
+
+.button_download{
+
+    padding : 10px;
+    
+    background: linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(0,149,255,1) 100%);
+    box-shadow: rgba(21, 0, 255, 0.12) 0px 2px 4px 0px, rgba(21, 0, 255, 0.32) 0px 2px 16px 0px;
+
+    color : white;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+
+}
+
+.button_download:hover{
+
+    box-shadow: rgba(0, 76, 255, 0.3) 0px 19px 38px, rgba(4, 0, 255, 0.22) 0px 15px 12px;
+    transition: 0.3s;
+
+}
+
+.panel_4_1{
+
+    margin-top: 60px;
+
+}
+
+#button-basic{
+    background: linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(0,149,255,1) 100%);
+    box-shadow: rgba(21, 0, 255, 0.12) 0px 2px 4px 0px, rgba(21, 0, 255, 0.32) 0px 2px 16px 0px;
+
+    color: white;
+    border: none;
+
+    transition: 0.3s;
+
+}
+
+#button-basic:hover{
+
+    box-shadow: rgba(0, 76, 255, 0.3) 0px 19px 38px, rgba(4, 0, 255, 0.22) 0px 15px 12px;
+    transition: 0.3s;
+
+}
+
 
 @media screen and (max-width: 768px) {
 

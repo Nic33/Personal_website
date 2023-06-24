@@ -22,6 +22,9 @@ import { TimelineModule } from 'primeng/timeline';
 import { ToastModule } from 'primeng/toast';
 import { MenubarModule } from 'primeng/menubar';
 import { LestonComponent } from './leston/leston.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
+import { AlertModule } from '@coreui/angular';
 
 @NgModule({
   declarations: [
@@ -29,8 +32,8 @@ import { LestonComponent } from './leston/leston.component';
     NavbarComponent, 
     HomeComponent, 
     FooterComponent, 
-    AccountComponent, 
     LestonComponent,
+    AccountComponent, 
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { LestonComponent } from './leston/leston.component';
     MenubarModule,
     FormsModule,
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
 
   ],
   providers: [],

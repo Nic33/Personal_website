@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+/* import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics"; */
 
 @Component({
   selector: 'app-account',

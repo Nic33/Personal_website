@@ -1,5 +1,6 @@
-import { Component, AfterViewInit , ViewChild, ElementRef } from '@angular/core';
-import { NG_ASYNC_VALIDATORS } from '@angular/forms';
+import { Component, AfterViewInit,OnInit } from '@angular/core';
+import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 declare var anime: any;                                 
 var index = 0;
@@ -7,11 +8,27 @@ var index = 0;
 @Component({
   selector: 'app-leston',
   templateUrl: './leston.component.html',
-  styleUrls: ['./leston.component.css']
+  styleUrls: ['./leston.component.css'],
+  providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }],
 })
-export class LestonComponent implements AfterViewInit {
+
+export class LestonComponent implements AfterViewInit, OnInit {
+
+  fileUrl : SafeResourceUrl = '';
+
+  constructor(private sanitizer: DomSanitizer) {}
+
+  ngOnInit() {
+    const data = 'some text';
+    const blob = new Blob([data], {
+      type: 'application/octet-stream'
+    });
+    this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
+  }
 
   words: string[] = [' sport', ' performance', ' calcul'];
+  
+  // selectedValue: string;
 
   ngAfterViewInit(): void {
     
@@ -60,5 +77,8 @@ export class LestonComponent implements AfterViewInit {
             
           }
         });
+        
   }
+
+
 } 
