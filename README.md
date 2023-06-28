@@ -75,3 +75,4 @@ https://fireship.io/lessons/angular-router-animations/
 Pour l'animation de mes texts, j'utilise animejs (v3.2.1).
 https://animejs.com/
 https://medium.com/linkit-intecs/cool-text-animations-in-angular-apps-with-anime-js-cd875c53cd3
+https://coreui.io/angular/docs/getting-started/introduction

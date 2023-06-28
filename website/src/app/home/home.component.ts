@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
-import { CarouselConfig } from 'ngx-bootstrap/carousel';
-import { AnimationBuilder, trigger, state, style, animate, transition } from '@angular/animations';
+import {trigger, state, style, animate, transition } from '@angular/animations';
 import { AnimationEvent } from '@angular/animations';
 import { MessageService } from 'primeng/api';
 
@@ -16,11 +15,6 @@ interface ProgressBar {
   templateUrl: './home.component.html',
 
   providers: [
-    { provide: CarouselConfig, useValue: { 
-      interval: 3000, 
-      noPause: false, 
-      showIndicators: true,
-      startFromIndex : 0 } },
       MessageService
  ],
 
@@ -45,10 +39,6 @@ export class HomeComponent implements AfterViewInit {
   events: any[];
 
   constructor(private el: ElementRef, private messageService: MessageService) {
-
-    for (let i = 0; i < this.img_names.length; i++) {
-      this.addSlide(i);
-    }
 
     this.events = [
       { status: 'Bac S SI à Talence', date: '2017-2020 ' },
@@ -111,35 +101,5 @@ export class HomeComponent implements AfterViewInit {
     }
   }
 
-  // --------------------------------------------------------
-  
-  slides: { image: string; text?: string }[] = [];
-
-  noWrapSlides = false;
-
-  
-  img_names = [
-    { name: "android.png", text : "Mon jeu vidéo"},
-    { name: "arduino.png", text : "Mes cours d'arduino"},
-    { name: "Sevenic.png", text : "Mes projets"},
-    { name: "Leston.png", text : "Mon logiciel"},
-    { name: "image_pro.png", text : "Projet Universitaire"},
-  ];
-
-
-  addSlide(i: number): void {
-    this.slides.push({
-      image: `assets/img/${this.img_names[i].name}`,
-      text: `${this.img_names[i].text}`
-
-    });
-  }
-
-  /* 
-  removeSlide(index?: number): void {
-    const toRemove = index ? index : this.activeSlideIndex;
-    this.slides.splice(toRemove, 1);
-  } 
-  */
 
 }

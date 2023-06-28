@@ -1,6 +1,7 @@
-import { Component, AfterViewInit,OnInit } from '@angular/core';
-import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { MessageService } from 'primeng/api';
+
 
 declare var anime: any;                                 
 var index = 0;
@@ -8,15 +9,35 @@ var index = 0;
 @Component({
   selector: 'app-leston',
   templateUrl: './leston.component.html',
-  styleUrls: ['./leston.component.css'],
-  providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }],
+  styleUrls: ['./leston.component.scss'],
+  providers: [MessageService
+    ],
 })
 
 export class LestonComponent implements AfterViewInit, OnInit {
 
-  fileUrl : SafeResourceUrl = '';
+  constructor(private sanitizer: DomSanitizer, private messageService: MessageService) {
 
-  constructor(private sanitizer: DomSanitizer) {}
+  }
+  
+  showTopCenter() {
+    this.messageService.add({ key: 'tc', severity: 'warn', summary: 'Warn', detail: 'Message Content' });
+  }
+
+  /*----------------------------------------*/
+
+  slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
+
+  /*----------------------------------------*/
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  /*----------------------------------------*/
+
+  items = [1, 2, 3, 4];
+
+  fileUrl : SafeResourceUrl = '';
 
   ngOnInit() {
     const data = 'some text';
@@ -24,6 +45,25 @@ export class LestonComponent implements AfterViewInit, OnInit {
       type: 'application/octet-stream'
     });
     this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
+
+    this.slides[0] = {
+      id: 0,
+      src: './assets/img_leston/bienvenu.png',
+      title: 'First slide',
+      subtitle: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+    };
+    this.slides[1] = {
+      id: 1,
+      src: './assets/img_leston/excel_graph.png',
+      title: 'Second slide',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    }
+    this.slides[2] = {
+      id: 2,
+      src: './assets/img_leston/submit.png',
+      title: 'Third slide',
+      subtitle: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+    }
   }
 
   words: string[] = [' sport', ' performance', ' calcul'];

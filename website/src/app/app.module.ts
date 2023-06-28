@@ -5,26 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Modules Angular Material
-//import { MatButtonModule } from '@angular/material/button';
-
 // Votre composant Navbar
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule } from '@angular/forms';
-//import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { TimelineModule } from 'primeng/timeline';
 import { ToastModule } from 'primeng/toast';
 import { MenubarModule } from 'primeng/menubar';
-import { LestonComponent } from './leston/leston.component';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { MessagesModule } from 'primeng/messages';
 
-import { AlertModule } from '@coreui/angular';
+import { LestonComponent } from './leston/leston.component';
+
+import { AccordionModule, SharedModule, CarouselModule} from '@coreui/angular';
 
 @NgModule({
   declarations: [
@@ -41,10 +37,14 @@ import { AlertModule } from '@coreui/angular';
     BrowserAnimationsModule,
     TimelineModule,
     ToastModule,
+    MessagesModule,
     MenubarModule,
     FormsModule,
+    AccordionModule, 
+    SharedModule,
     CarouselModule.forRoot(),
-    BsDropdownModule.forRoot(),
+    // BsDropdownModule.forRoot(),
+    CarouselModule,
 
   ],
   providers: [],

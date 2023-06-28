@@ -1,5 +1,11 @@
 <div class = "leston">
 
+    <button class="scroll-to-top-button" (click)="scrollToTop()">
+        <span class="material-symbols-outlined">
+            expand_less
+        </span>
+    </button>
+
     <div class = "panel_1">
 
         <a class="button_back" routerLink="/">
@@ -51,43 +57,35 @@
     
     <h3>About the project</h3>
 
+    <c-carousel [dark]="true" [wrap]="true" [animate]="true" transition="crossfade">
+        <c-carousel-indicators></c-carousel-indicators>
 
-<!--    <div class="image-container">
-            <img src="../../assets/img_leston/bienvenu.png" alt="Votre image">
-            <div class="overlay">
-              <p class="overlay-text">Texte qui apparaît sur l'image</p>
-            </div>
-        </div> -->
+        <c-carousel-inner>
+            <c-carousel-item *ngFor="let slide of slides; index as i;">
+                <img
+                    [src]="slide.src"
+                    alt="{{slide.title}}"
+                    class="image_carousel "
+                    loading="lazy"
+                />
 
-    <div class="panel_3">
-        <div class="panel_3_1">
-            <div class="image-container">
-                <img src="../../assets/img_leston/bienvenu.png" alt="Votre image">
-                <div class="overlay">
-                    <p class="overlay-text">Texte qui apparaît sur l'image</p>
-                </div>
-            </div>
-        </div>
+                <c-carousel-caption class="carousel-caption-custom">
+                    <h4>{{slide.title}}</h4>
+                    <p>{{slide.subtitle}}</p>
+                </c-carousel-caption>
+            </c-carousel-item>
+
+        </c-carousel-inner>
+
+        <c-carousel-control [routerLink] caption="Previous" direction="prev" class="carousel-control-prev">
+        </c-carousel-control>
         
-        <div class="panel_3_1">
-            <div class="image-container">
-                <img src="../../assets/img_leston/submit.png" alt="Votre image">
-                <div class="overlay">
-                    <p class="overlay-text">Texte qui apparaît sur l'image</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="panel_3_1">
-            <div class="image-container">
-                <img src="../../assets/img_leston/excel_graph.png" alt="Votre image">
-                <div class="overlay">
-                    <p class="overlay-text">Texte qui apparaît sur l'image</p>
-                </div>
-            </div>
-        </div>
-    </div>
-          
+        <c-carousel-control [routerLink] caption="Next" direction="next" class="carousel-control-next">
+        </c-carousel-control>
+
+    </c-carousel>
+
+
    
     <hr class="new ">
 
@@ -95,7 +93,8 @@
 
     <div class = "panel_4">
 
-        <a class = "button_download" [href]="fileUrl" download="file.txt">Download V1.2</a>
+        <p-toast position="top-center" key="tc"></p-toast>
+        <a class = "button_download" (click)="showTopCenter()" [href]="fileUrl" download="file.txt">Download V1.2</a>
 
         <div class = "panel_4_1">
             <p>Choose an older version :</p>
@@ -121,6 +120,71 @@
 
     <h3>Question</h3>
 
-    
+    <div class = "panel_5">
 
+        <c-accordion>
+            <c-accordion-item #item0="cAccordionItem" [visible]="false">
+            <ng-template cTemplateId="accordionHeaderTemplate">
+                <button (click)="item0.toggleItem()" [collapsed]="!item0.visible" cAccordionButton>
+                Accordion item #0
+                </button>
+            </ng-template>
+            <ng-template cTemplateId="accordionBodyTemplate">
+                <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and
+                hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                our default variables. It's also worth noting that just about any HTML can go within
+                the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </ng-template>
+            </c-accordion-item>
+            <c-accordion-item #item1="cAccordionItem" [visible]="false">
+            <ng-template cTemplateId="accordionHeaderTemplate">
+                <button (click)="item1.toggleItem()" [collapsed]="!item1.visible" cAccordionButton>
+                Accordion item #1
+                </button>
+            </ng-template>
+            <ng-template cTemplateId="accordionBodyTemplate">
+                <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and
+                hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                our default variables. It's also worth noting that just about any HTML can go within
+                the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </ng-template>
+            </c-accordion-item>
+            <c-accordion-item #item2="cAccordionItem" [visible]="false">
+            <ng-template cTemplateId="accordionHeaderTemplate">
+                <button (click)="item2.toggleItem()" [collapsed]="!item2.visible" cAccordionButton>
+                Accordion item #2
+                </button>
+            </ng-template>
+            <ng-template cTemplateId="accordionBodyTemplate">
+                <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and
+                hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                our default variables. It's also worth noting that just about any HTML can go within
+                the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </ng-template>
+            </c-accordion-item>
+        </c-accordion>
+
+    </div>
+
+    <div class = "mini_footer">
+        <button>
+            Main Page
+        </button>
+
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+            <img class='CC' alt="Licence Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+        </a>
+    </div>
 </div>
