@@ -1,4 +1,6 @@
-$gradient: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(0, 149, 255, 1) 100%);
+$color_gradient: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(0, 149, 255, 1) 100%);
+$shadow_gradient: rgba(21, 0, 255, 0.12) 0px 2px 4px 0px, rgba(21, 0, 255, 0.32) 0px 2px 16px 0px;
+$shadow_gradient_hover: rgba(0, 76, 255, 0.3) 0px 19px 38px, rgba(4, 0, 255, 0.22) 0px 15px 12px;
 
 .scroll-to-top-button {
 
@@ -11,15 +13,14 @@ $gradient: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(0, 149, 255, 1) 1
     right: 20px;
     z-index:1;
 
-    background: $gradient;
+    background: $color_gradient;
     color: white;
 
     border-radius: 5px;
     border: none;
 
-    box-shadow: rgba(21, 0, 255, 0.12) 0px 2px 4px 0px, rgba(21, 0, 255, 0.32) 0px 2px 16px 0px;
+    box-shadow: $shadow_gradient;
     transition: 0.3s;
-    /* Ajoutez d'autres styles personnalisés */
 }
 
 .scroll-to-top-button:hover {
@@ -33,13 +34,13 @@ $gradient: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(0, 149, 255, 1) 1
     right: 20px;
     z-index:1;
 
-    background: $gradient;
+    background: $color_gradient;
     color: white;
 
     border-radius: 10px;
     border: none;
     
-    box-shadow: rgba(0, 76, 255, 0.3) 0px 19px 38px, rgba(4, 0, 255, 0.22) 0px 15px 12px;
+    box-shadow: $shadow_gradient_hover;
     transition: 0.3s;
 
     /* Ajoutez d'autres styles personnalisés */
@@ -68,7 +69,7 @@ $gradient: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(0, 149, 255, 1) 1
     flex: 1;
     text-align: center;
     margin: 0;
-    margin-right: 100px; /* Ajoutez la valeur de décalage souhaitée en pixels */
+    margin-right: 100px; 
 }
 
 
@@ -88,6 +89,11 @@ $gradient: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(0, 149, 255, 1) 1
 
 .material-symbols-outlined {
     font-size: 30px;
+}
+
+c-toast-header > .material-symbols-outlined {
+    font-size: 30px;
+    margin-right: 10px;
 }
 
 a{
@@ -205,8 +211,8 @@ a{
 
     padding : 10px;
     
-    background: $gradient;
-    box-shadow: rgba(21, 0, 255, 0.12) 0px 2px 4px 0px, rgba(21, 0, 255, 0.32) 0px 2px 16px 0px;
+    background: $color_gradient;
+    box-shadow: $shadow_gradient;
 
     color : white;
 
@@ -218,7 +224,7 @@ a{
 
 .button_download:hover{
 
-    box-shadow: rgba(0, 76, 255, 0.3) 0px 19px 38px, rgba(4, 0, 255, 0.22) 0px 15px 12px;
+    box-shadow: $shadow_gradient_hover;
     transition: 0.3s;
 
 }
@@ -230,19 +236,22 @@ a{
 }
 
 #button-basic{
-    background: $gradient;
-    box-shadow: rgba(21, 0, 255, 0.12) 0px 2px 4px 0px, rgba(21, 0, 255, 0.32) 0px 2px 16px 0px;
+    background: $color_gradient;
+    box-shadow: $shadow_gradient;
 
     color: white;
     border: none;
 
     transition: 0.3s;
 
+    padding : 10px;
+    border-radius: 5px;
+
 }
 
 #button-basic:hover{
 
-    box-shadow: rgba(0, 76, 255, 0.3) 0px 19px 38px, rgba(4, 0, 255, 0.22) 0px 15px 12px;
+    box-shadow: $shadow_gradient_hover;
     transition: 0.3s;
 
 }
@@ -261,7 +270,7 @@ a{
 /*--------------------------------------*/
 
 .mini_footer{
-    background: $gradient;
+    background: $color_gradient;
 
     display: flex; 
     flex-direction: column;
@@ -309,8 +318,8 @@ a{
 
     .panel_5{
 
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 50px;
+        margin-right: 50px;
     
     }
 

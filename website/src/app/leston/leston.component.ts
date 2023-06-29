@@ -1,7 +1,6 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { MessageService } from 'primeng/api';
-
+import { ToasterPlacement } from '@coreui/angular';
 
 declare var anime: any;                                 
 var index = 0;
@@ -10,18 +9,31 @@ var index = 0;
   selector: 'app-leston',
   templateUrl: './leston.component.html',
   styleUrls: ['./leston.component.scss'],
-  providers: [MessageService
+  providers: [
     ],
 })
 
 export class LestonComponent implements AfterViewInit, OnInit {
 
-  constructor(private sanitizer: DomSanitizer, private messageService: MessageService) {
+  constructor(private sanitizer: DomSanitizer) {
 
   }
   
-  showTopCenter() {
-    this.messageService.add({ key: 'tc', severity: 'warn', summary: 'Warn', detail: 'Message Content' });
+  placement = ToasterPlacement.TopCenter;
+  visible = false;
+  percentage = 0;
+
+  toggleToast() {
+    this.visible = !this.visible;
+  }
+
+  onVisibleChange($event: boolean) {
+    this.visible = $event;
+    this.percentage = !this.visible ? 0 : this.percentage;
+  }
+
+  onTimerChange($event: number) {
+    this.percentage = $event * 25;
   }
 
   /*----------------------------------------*/

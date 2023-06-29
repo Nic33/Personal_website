@@ -93,27 +93,52 @@
 
     <div class = "panel_4">
 
-        <p-toast position="top-center" key="tc"></p-toast>
-        <a class = "button_download" (click)="showTopCenter()" [href]="fileUrl" download="file.txt">Download V1.2</a>
+        <!-- <a class = "button_download" (click)="toggleToast()" [href]="fileUrl" download="file.txt">Download V1.2</a> -->
 
+        <a class = "button_download" (click)="toggleToast()">Download V1.2</a> 
+
+        <c-toaster [placement]="placement" class="p-3" position="fixed">
+            <c-toast
+              (timer)="onTimerChange($event)"
+              (visibleChange)="onVisibleChange($event)"
+              [visible]="visible"
+              class="align-items-center text-white border-0" 
+              color="success"
+              >
+              <c-toast-header>
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+
+                CoreUI for Angular
+              </c-toast-header>
+              <c-toast-body>
+                <p>This is static toast message in a toaster</p>
+
+                <c-progress thin>
+                    <c-progress-bar [value]="percentage" color="primary"></c-progress-bar>
+                </c-progress>
+            
+              </c-toast-body>
+            </c-toast>
+         </c-toaster>
+        
         <div class = "panel_4_1">
+
             <p>Choose an older version :</p>
 
-            <div class="btn-group" dropdown>
-                <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                        aria-controls="dropdown-basic">
-                Choose <span class="caret"></span>
+            <c-dropdown>
+                <button id="button-basic" cButton cDropdownToggle>
+                  Dropdown button
                 </button>
-                <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-                    role="menu" aria-labelledby="button-basic">
-                <li role="menuitem"><a class="dropdown-item" href="#">V1.2 (2023)</a></li>
-                <li role="menuitem"><a class="dropdown-item" href="#">V1 (2022)</a></li>
-                <li class="divider dropdown-divider"></li>
-                <li role="menuitem"><a class="dropdown-item" href="#">not stable version</a>
-                </li>
+                <ul cDropdownMenu>
+                  <li><a [routerLink]="[]" cDropdownItem>Action</a></li>
+                  <li><a [routerLink]="[]" cDropdownItem>Another action</a></li>
+                  <li><a [routerLink]="[]" cDropdownItem>Something else here</a></li>
                 </ul>
-            </div>
+              </c-dropdown>
         </div>
+
     </div>
 
     <hr class="new ">
