@@ -7,16 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 
 // Les Pages
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './home/navbar/navbar.component';
+import { FooterComponent } from './home/footer/footer.component';
 
 import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
 
 import { LestonComponent } from './leston/leston.component';
 
+import { TimelineComponent } from './home/timeline/timeline.component';
+
 // Les API
-import { TimelineModule } from 'primeng/timeline';
 import { MenubarModule } from 'primeng/menubar';
 
 import { AccordionModule, SharedModule, CarouselModule, ToastModule, ProgressModule, DropdownModule} from '@coreui/angular';
@@ -28,13 +29,13 @@ import { AccordionModule, SharedModule, CarouselModule, ToastModule, ProgressMod
     HomeComponent, 
     FooterComponent, 
     LestonComponent,
-    AccountComponent, 
+    AccountComponent,
+    TimelineComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TimelineModule,
     ToastModule,
     ProgressModule,
     MenubarModule,

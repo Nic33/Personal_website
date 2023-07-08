@@ -1,6 +1,7 @@
+$color_gradient : linear-gradient(90deg, rgb(17, 0, 167) 0%, rgb(0, 99, 238) 100%);
+
 .footer{
-    background-color: rgb(80, 80, 80);
-    /* margin-top: -1px; */ /* un espace de merde sinon  */
+    background: $color_gradient;
     display: inline-block; 
     width: 100%;
 
@@ -9,9 +10,13 @@
     align-items: center;
 
     color: white;
-
+    
     font-family: 'Michroma', sans-serif;
 
+    margin: 0;
+    padding: 0;
+
+    border-top: 0 none;
 }
 
 a{

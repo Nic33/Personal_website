@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, Renderer2, ElementRef , OnInit} from '@angular/core';
 import {trigger, state, style, animate, transition } from '@angular/animations';
 import { AnimationEvent } from '@angular/animations';
 import { MessageService } from 'primeng/api';
@@ -36,16 +36,7 @@ export class HomeComponent implements AfterViewInit {
 
   private observer!: IntersectionObserver;
 
-  events: any[];
-
   constructor(private el: ElementRef, private messageService: MessageService) {
-
-    this.events = [
-      { status: 'Bac S SI à Talence', date: '2017-2020 ' },
-      { status: 'Licence Informatique à Talence', date: '2020-2023 ' },
-      { status: "1A R&I à l'Enseirb Matmeca de Talence", date: '2023-2024 ' }
-
-    ];
   }
 
   show() {
@@ -101,5 +92,26 @@ export class HomeComponent implements AfterViewInit {
     }
   }
 
+  slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
 
+  ngOnInit() {
+    this.slides[0] = {
+      id: 0,
+      src: './assets/img_leston/bienvenu.png',
+      title: 'First slide',
+      subtitle: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+    };
+    this.slides[1] = {
+      id: 1,
+      src: './assets/img_leston/excel_graph.png',
+      title: 'Second slide',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    }
+    this.slides[2] = {
+      id: 2,
+      src: './assets/img_leston/submit.png',
+      title: 'Third slide',
+      subtitle: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+    }
+  }
 }

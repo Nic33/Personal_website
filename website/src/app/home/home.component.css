@@ -3,7 +3,11 @@
     font-family: 'Michroma', sans-serif;
     text-align: center;
     color: white;
+
     margin: 0;
+    padding: 0;
+    
+    
     height: 100%;
 }
 
@@ -28,37 +32,71 @@
 
 }
 
-.carousel {
-    min-width: 400px; 
-    max-width: 900px;
-    height: auto;
-
-    margin-left:  2%;
-    margin-right:  2%;
-
+c-carousel{
+    width:500px;
 }
 
-.carousel_img{
-    width: 100%;
-    height: auto;
+.image_carousel{
+    width:500px;
+}
 
-    padding-left:80px;
-    padding-right:80px;
-    padding-bottom:80px;
+.carousel-caption-custom {
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle{
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background-color: rgb(30, 30, 30); 
     padding-top:20px;
 
+    position: relative; 
+
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
+
+.circle > .material-symbols-outlined{
+
+    font-size: 60px;
+
+}
+
+
 
 /* ----------------------------------------------------- */
  
 .panel_2{
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(17, 0, 167) 0%, rgb(0, 99, 238) 100%);
     width: 100%;
-    margin-top: 6%;
-    margin-bottom: 6%;
+
+    padding-top:50px;
+    padding-bottom:50px;
 }
 
-/* ----------------------------------------------------- */
+.circle_2 {
+
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background-color: rgb(0, 76, 255); 
+    padding-top:20px;
+
+    position: relative; 
+
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.circle_2 > .material-symbols-outlined{
+
+    font-size: 60px;
+
+}
 
 .titre_flex{
 
@@ -71,14 +109,12 @@
 
 .titre_flex > img{
 
-
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 100px;
+    margin-left:80px;
 
 }
-
-/* ----------------------------------------------------- */
 
 .a-propos{
 
@@ -95,15 +131,13 @@
 
 }
 
-/* ----------------------------------------------------- */
-
 .presentation{
 
     font-family: 'Roboto', sans-serif;
 
     width: 400px;
     height: auto;
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
 
     padding:20px;
@@ -113,15 +147,13 @@
 
 }
 
-/* ----------------------------------------------------- */
-
 .presentation_2{
 
     font-family: 'Roboto', sans-serif;
 
     width: 400px;
     height: auto;
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
 
     padding:20px;
@@ -150,7 +182,7 @@
   }
 
   .progress-bar {
-    background-color: #00bdb7;
+    background-color: #0037ff;
     border-radius: 10px;
     
     height: 100%;
@@ -158,32 +190,26 @@
 
   }
   
-
-/* ----------------------------------------------------- */
-
 .presentation_3{
 
     font-family: 'Roboto', sans-serif;
 
-    width: 400px;
-    height: auto;
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
 
     padding:20px;
 
-    margin-left:4%;
-    margin-right:4%;
+    margin-left:10%;
+    margin-right:10%;
 }
-
 
 /* ----------------------------------------------------- */
 
 .panel_3{
+
     background-color: rgb(0, 0, 0);
     width: 100%;
-    
-    margin-top: 6%;
+
     padding-bottom: 6%;
 
 }
@@ -203,22 +229,30 @@
 
 }
 
-.proj{
+details{
 
     font-family: 'Roboto', sans-serif;
 
     width: 400px;
-    height: auto;
+
     background-color: rgb(80, 80, 80);
     border-radius: 5px;
 
     padding:20px;
     margin: 20px;
 
+} 
+
+details[open] {
+    height: 300px; 
+ }
+
+details > a > img{
+    width:80px;
 }
 
-.proj > a > img{
-    width:80px;
+details[open] > summary{
+    margin-bottom: 30px;
 }
 
 /* ----------------------------------------------------- */
@@ -261,5 +295,11 @@ summary{
     .carousel {
         margin: 0;
         
+    }
+
+    .presentation,.presentation_2,.presentation_3{
+        margin-left: 50px;
+        margin-right: 50px;
+
     }
 }

@@ -1,5 +1,7 @@
+$color_gradient : linear-gradient(90deg, rgb(17, 0, 167) 0%, rgb(0, 99, 238) 100%);
+
 .navbar {
-  background-color: rgb(80, 80, 80);
+  background: $color_gradient;
   position: fixed;
   top: 0;
   left: 0;

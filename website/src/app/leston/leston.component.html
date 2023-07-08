@@ -52,41 +52,42 @@
     
     </div>    
     
-    
     <hr class="new ">
     
     <h3>About the project</h3>
 
-    <c-carousel [dark]="true" [wrap]="true" [animate]="true" transition="crossfade">
-        <c-carousel-indicators></c-carousel-indicators>
+    <div class = "panel_3">
 
-        <c-carousel-inner>
-            <c-carousel-item *ngFor="let slide of slides; index as i;">
-                <img
-                    [src]="slide.src"
-                    alt="{{slide.title}}"
-                    class="image_carousel "
-                    loading="lazy"
-                />
+        <c-carousel [dark]="true" [wrap]="true" [animate]="true" transition="crossfade">
+            <c-carousel-indicators></c-carousel-indicators>
 
-                <c-carousel-caption class="carousel-caption-custom">
-                    <h4>{{slide.title}}</h4>
-                    <p>{{slide.subtitle}}</p>
-                </c-carousel-caption>
-            </c-carousel-item>
+            <c-carousel-inner>
+                <c-carousel-item *ngFor="let slide of slides; index as i;">
+                    <img
+                        [src]="slide.src"
+                        alt="{{slide.title}}"
+                        class="image_carousel "
+                        loading="lazy"
+                    />
 
-        </c-carousel-inner>
+                    <c-carousel-caption class="carousel-caption-custom">
+                        <h4>{{slide.title}}</h4>
+                        <p>{{slide.subtitle}}</p>
+                    </c-carousel-caption>
+                </c-carousel-item>
 
-        <c-carousel-control [routerLink] caption="Previous" direction="prev" class="carousel-control-prev">
-        </c-carousel-control>
-        
-        <c-carousel-control [routerLink] caption="Next" direction="next" class="carousel-control-next">
-        </c-carousel-control>
+            </c-carousel-inner>
 
-    </c-carousel>
+            <c-carousel-control [routerLink] caption="Previous" direction="prev" class="carousel-control-prev">
+            </c-carousel-control>
+            
+            <c-carousel-control [routerLink] caption="Next" direction="next" class="carousel-control-next">
+            </c-carousel-control>
 
+        </c-carousel>
 
-   
+    </div>
+
     <hr class="new ">
 
     <h3>Download</h3>
