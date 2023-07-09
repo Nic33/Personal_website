@@ -1,8 +1,11 @@
+<app-custom-toast></app-custom-toast>
+
 <nav class="navbar">
+
   <div class="navbar-container">
-    <a routerLink="/account" >
+    <a cOffcanvasToggle="OffcanvasStart" (click)="customToast.toggleToast('Impossible d\'envoyer des messages pour le moment', 1)">
       <span class="material-symbols-outlined">        
-        account_circle
+        mail
       </span>
     </a>
     <a routerLink="/" class="nav-toggle" (click)="toggleMenu()">
@@ -20,4 +23,42 @@
   </div>
 </nav>
 
+<c-offcanvas placement="start" id="OffcanvasStart">
+  <c-offcanvas-header>
+    <h5 cOffcanvasTitle>Contacte-moi</h5>
+    <button
+      cButtonClose
+      class="text-reset"
+      cOffcanvasToggle="OffcanvasStart"
+      aria-label="Close"
+    ></button>
+
+
+  </c-offcanvas-header>
+  <c-offcanvas-body style="text-align: center">
+
+    <form id="contactForm">
+
+      <label for="name">Nom:</label>
+      <br>
+      <input type="text" id="name" name="name" required>
+
+      <br><br>
+      <label for="email">Email:</label>
+      <br>
+      <input type="email" id="email" name="email" required>
+
+      <br><br>
+      <label for="message">Message:</label>
+      <br>
+      <textarea id="message" name="message" required></textarea>
+
+      <br><br>
+      <button class="btn_2" type="submit">Envoyer</button>
+    </form>
+
+    <button class="btn_1">Linkedin</button>
+
+  </c-offcanvas-body>
+</c-offcanvas>
   

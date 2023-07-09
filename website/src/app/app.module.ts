@@ -11,16 +11,17 @@ import { NavbarComponent } from './home/navbar/navbar.component';
 import { FooterComponent } from './home/footer/footer.component';
 
 import { HomeComponent } from './home/home.component';
-import { AccountComponent } from './account/account.component';
 
 import { LestonComponent } from './leston/leston.component';
 
 import { TimelineComponent } from './home/timeline/timeline.component';
 
 // Les API
-import { MenubarModule } from 'primeng/menubar';
 
-import { AccordionModule, SharedModule, CarouselModule, ToastModule, ProgressModule, DropdownModule} from '@coreui/angular';
+import { ButtonModule,OffcanvasModule, AccordionModule, SharedModule, CarouselModule, ToastModule, ProgressModule, DropdownModule} from '@coreui/angular';
+import { IconModule, IconSetService } from '@coreui/icons-angular';
+import { CustomToastComponent } from './custom-toast/custom-toast.component';
+import { USAComponent } from './usa/usa.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,9 @@ import { AccordionModule, SharedModule, CarouselModule, ToastModule, ProgressMod
     HomeComponent, 
     FooterComponent, 
     LestonComponent,
-    AccountComponent,
-    TimelineComponent, 
+    TimelineComponent,
+    CustomToastComponent,
+    USAComponent, 
   ],
   imports: [
     BrowserModule,
@@ -38,16 +40,17 @@ import { AccordionModule, SharedModule, CarouselModule, ToastModule, ProgressMod
     BrowserAnimationsModule,
     ToastModule,
     ProgressModule,
-    MenubarModule,
     FormsModule,
     AccordionModule, 
     SharedModule,
     CarouselModule.forRoot(),
     DropdownModule,
     CarouselModule,
-
+    OffcanvasModule,
+    IconModule,
+    ButtonModule,
   ],
-  providers: [],
+  providers: [IconSetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -297,6 +297,14 @@ summary{
         
     }
 
+    c-carousel{
+        width:400px;
+    }
+    
+    .image_carousel{
+        width:400px;
+    }
+
     .presentation,.presentation_2,.presentation_3{
         margin-left: 50px;
         margin-right: 50px;

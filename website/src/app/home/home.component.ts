@@ -1,7 +1,6 @@
 import { Component, AfterViewInit, Renderer2, ElementRef , OnInit} from '@angular/core';
 import {trigger, state, style, animate, transition } from '@angular/animations';
 import { AnimationEvent } from '@angular/animations';
-import { MessageService } from 'primeng/api';
 
 // Ajoutez l'interface ici
 interface ProgressBar {
@@ -15,7 +14,7 @@ interface ProgressBar {
   templateUrl: './home.component.html',
 
   providers: [
-      MessageService
+      
  ],
 
   styleUrls: ['./home.component.css'],
@@ -36,11 +35,7 @@ export class HomeComponent implements AfterViewInit {
 
   private observer!: IntersectionObserver;
 
-  constructor(private el: ElementRef, private messageService: MessageService) {
-  }
-
-  show() {
-    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
+  constructor(private el: ElementRef) {
   }
 
   // Mettre à jour la propriété progressBars avec le type ProgressBar[]

@@ -58,6 +58,29 @@ $color_gradient : linear-gradient(90deg, rgb(17, 0, 167) 0%, rgb(0, 99, 238) 100
   border-radius: 4px;
 }
 
+.btn_1{
+
+  background-color: blue;
+  color: white;
+  border-style: none;
+  padding: 10px;
+  border-radius: 5px;
+
+  position: fixed;
+  bottom: 50px;
+  transform: translateX(-50%);
+
+}
+
+.btn_2{
+
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border-style: none;
+  padding: 10px;
+  border-radius: 5px;
+
+}
 
 @media screen and (max-width: 768px) {
   .nav-toggle {

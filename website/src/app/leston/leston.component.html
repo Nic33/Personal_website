@@ -1,3 +1,5 @@
+<app-custom-toast></app-custom-toast>
+
 <div class = "leston">
 
     <button class="scroll-to-top-button" (click)="scrollToTop()">
@@ -96,34 +98,8 @@
 
         <!-- <a class = "button_download" (click)="toggleToast()" [href]="fileUrl" download="file.txt">Download V1.2</a> -->
 
-        <a class = "button_download" (click)="toggleToast()">Download V1.2</a> 
-
-        <c-toaster [placement]="placement" class="p-3" position="fixed">
-            <c-toast
-              (timer)="onTimerChange($event)"
-              (visibleChange)="onVisibleChange($event)"
-              [visible]="visible"
-              class="align-items-center text-white border-0" 
-              color="success"
-              >
-              <c-toast-header>
-                <span class="material-symbols-outlined">
-                    check_circle
-                </span>
-
-                CoreUI for Angular
-              </c-toast-header>
-              <c-toast-body>
-                <p>This is static toast message in a toaster</p>
-
-                <c-progress thin>
-                    <c-progress-bar [value]="percentage" color="primary"></c-progress-bar>
-                </c-progress>
-            
-              </c-toast-body>
-            </c-toast>
-         </c-toaster>
-        
+        <a class="button_download" (click)="customToast.toggleToast('Téléchargement', 2)">Download V1.2</a>
+                
         <div class = "panel_4_1">
 
             <p>Choose an older version :</p>

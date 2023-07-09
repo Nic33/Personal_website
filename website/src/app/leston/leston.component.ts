@@ -1,6 +1,6 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ViewChild} from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ToasterPlacement } from '@coreui/angular';
+import { CustomToastComponent } from '../custom-toast/custom-toast.component';
 
 declare var anime: any;                                 
 var index = 0;
@@ -15,27 +15,13 @@ var index = 0;
 
 export class LestonComponent implements AfterViewInit, OnInit {
 
+  @ViewChild(CustomToastComponent)
+  customToast!: CustomToastComponent;
+  
   constructor(private sanitizer: DomSanitizer) {
 
   }
   
-  placement = ToasterPlacement.TopCenter;
-  visible = false;
-  percentage = 0;
-
-  toggleToast() {
-    this.visible = !this.visible;
-  }
-
-  onVisibleChange($event: boolean) {
-    this.visible = $event;
-    this.percentage = !this.visible ? 0 : this.percentage;
-  }
-
-  onTimerChange($event: number) {
-    this.percentage = $event * 25;
-  }
-
   /*----------------------------------------*/
 
   slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
@@ -52,6 +38,7 @@ export class LestonComponent implements AfterViewInit, OnInit {
   fileUrl : SafeResourceUrl = '';
 
   ngOnInit() {
+    
     const data = 'some text';
     const blob = new Blob([data], {
       type: 'application/octet-stream'
@@ -76,6 +63,7 @@ export class LestonComponent implements AfterViewInit, OnInit {
       title: 'Third slide',
       subtitle: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
     }
+
   }
 
   words: string[] = [' sport', ' performance', ' calcul'];
