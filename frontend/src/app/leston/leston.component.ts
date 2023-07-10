@@ -39,6 +39,8 @@ export class LestonComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     
+    this.scrollToTop();
+    
     const data = 'some text';
     const blob = new Blob([data], {
       type: 'application/octet-stream'
@@ -70,9 +72,14 @@ export class LestonComponent implements AfterViewInit, OnInit {
   
   // selectedValue: string;
 
+  test:boolean = false;
+
   ngAfterViewInit(): void {
     
-    this.animateWords();
+    if (this.test == false){
+      this.animateWords();
+      this.test = true;
+    }
 
   }
 

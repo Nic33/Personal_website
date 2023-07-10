@@ -16,12 +16,13 @@ import { LestonComponent } from './leston/leston.component';
 
 import { TimelineComponent } from './home/timeline/timeline.component';
 
+import { USAComponent } from './usa/usa.component';
+
 // Les API
 
 import { ButtonModule,OffcanvasModule, AccordionModule, SharedModule, CarouselModule, ToastModule, ProgressModule, DropdownModule} from '@coreui/angular';
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { CustomToastComponent } from './custom-toast/custom-toast.component';
-import { USAComponent } from './usa/usa.component';
 
 @NgModule({
   declarations: [
