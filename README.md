@@ -3,7 +3,7 @@
 L'objectif de ce projet c'est de me créer un site web personnel en utilisant le framework Angular.
 Toutes les étapes pour créer un projet Angular sont présentes [ici](https://angular.io/guide/setup-local).
 
-Pour commencer, il faut installer `node_modules` en utilisant `npm install`. Puis pour lancer l'application il faut utiliser la commande suivante `ng serve --port 4201` (vous pouvez changer le port).
+Pour commencer, il faut installer `node_modules` en utilisant `npm install`. Puis pour lancer l'application il faut utiliser la commande suivante `npm start`.
 
 Pour construire votre application pour la production, utilisez la commande : `ng build`.
 Pour créer un nouveau répertoire, utilisez : `ng generate component nom_du_repertoire`.
@@ -76,3 +76,4 @@ Pour l'animation de mes texts, j'utilise animejs (v3.2.1).
 https://animejs.com/
 https://medium.com/linkit-intecs/cool-text-animations-in-angular-apps-with-anime-js-cd875c53cd3
 https://coreui.io/angular/docs/getting-started/introduction
+https://www.techgeeknext.com/angular-upload-image-spring-boot-example
