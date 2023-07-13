@@ -1,1 +1,19 @@
 <p>usa works!</p>
+
+<select [(ngModel)]="selectedTeam" (ngModelChange)="onSelected(selectedTeam)">
+    <option value="0">Cake</option >
+    <option value="1">Léonie</option>
+    <option value="2">Nothing</option>
+</select>
+
+<br>
+<br>
+
+<input type="button" (click)="loadImage()" value="View Image" >
+
+<p>mon message = {{message}}</p>
+
+<div *ngIf=imageSrc>
+    <img [src]="imageSrc">
+</div>
+

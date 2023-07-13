@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 // Les Pages
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { FooterComponent } from './home/footer/footer.component';
@@ -44,12 +46,12 @@ import { CustomToastComponent } from './custom-toast/custom-toast.component';
     FormsModule,
     AccordionModule, 
     SharedModule,
-    CarouselModule.forRoot(),
     DropdownModule,
     CarouselModule,
     OffcanvasModule,
     IconModule,
     ButtonModule,
+    HttpClientModule
   ],
   providers: [IconSetService],
   bootstrap: [AppComponent]

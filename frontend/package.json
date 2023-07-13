@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve\" \"cd ../backend && mvn spring-boot:run\"",
+    "start": "concurrently \"ng serve --port 8080\" \"cd ../backend && mvn spring-boot:run\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
